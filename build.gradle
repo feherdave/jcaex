@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'org.fd'
+version '0.1'
+
+description("Java module for reading CAEX v2.15/v3.0 files")
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0'
+    implementation 'com.sun.xml.bind:jaxb-impl:4.0.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/feherdave/jcaex"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
