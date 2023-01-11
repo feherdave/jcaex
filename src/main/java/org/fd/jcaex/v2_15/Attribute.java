@@ -21,13 +21,13 @@ public class Attribute extends CAEXObject {
     /**
      * A predefined default value for an attribute.
      */
-    @XmlElement(name="DefaultValue")
+    @XmlElement(name = "DefaultValue")
     String defaultValue;
 
     /**
      * Element describing the value of an attribute.
      */
-    @XmlElement(name="Value")
+    @XmlElement(name = "Value")
     String value;
 
     @XmlElement(name = "RefSemantic")

@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c1dca0b-6c71-4c58-909f-36b7f4594957" name="Changes" comment="Initial commit" />
+    <list default="true" id="0c1dca0b-6c71-4c58-909f-36b7f4594957" name="Changes" comment="Created CAEXFilter class and javadoc.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/AbstractElementFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/CAEXFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/CAEXFilterException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/ElementFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/FilterNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/TextNodeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/GenericCAEXObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/GenericCAEXObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/tools/CAEXTools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/v2_15/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/v2_15/Attribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jcaextest/jcaextest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jcaextest/JCAEXTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +28,44 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jcaex" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jcaex" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="jcaex" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,14 +81,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "11"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="org.fd.jcaex.tools.CAEXFilter" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.fd.jcaex" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="jcaex [javadoc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="javadoc" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.jcaex [javadoc]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672660016656</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed module-info.java">
+      <created>1672836730899</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672836730899</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -70,6 +165,25 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Fixed module-info.java" />
+    <MESSAGE value="Created CAEXFilter class and javadoc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created CAEXFilter class and javadoc." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.fd.jcaex.tools.FilterNode" memberName="deepSearch" />
+        <PinnedItemInfo parentTag="org.fd.jcaex.tools.FilterNode" memberName="parentFilterNode" />
+        <PinnedItemInfo parentTag="java.util.KeyValueHolder" memberName="value" />
+        <PinnedItemInfo parentTag="org.fd.jcaex.tools.CAEXFilter$ElementFilter" memberName="childFilterParameters" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="caexFilter.filterParameters.get(0).elementFilters.get(0)" />
+        <watch expression="caexFilter.filterParameters.get(0).childFilterNode.elementFilters" />
+        <watch expression="caexFilter.filterNodes" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

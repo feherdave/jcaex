@@ -6,21 +6,22 @@ import jakarta.xml.bind.annotation.XmlElement;
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Class of generic CAEX object.
- * This serves as a bridge between several versions of CAEX schema.
+ * This serves as a bridge between several versions of CAEX schema and their processing logic.
  * Using it, it is possible to implement several functions with only one implementation.
- * A GenericCAEXObject always contians the reference to its source CAEX object,
- * so it's easy to switch back to work with the original object.
+ * A GenericCAEXObject always contains the reference to its source CAEX object,
+ * making it easy to switch back to work with the original object.
  */
 public class GenericCAEXObject {
 
     private GenericCAEXObject parent;
-    private Object sourceCAEXObject;
     private String elementName;
-    private Map<String, Object> attributes;
-    private Map<String, Object> children;
+    private final Object sourceCAEXObject;
+    private final Map<String, Object> attributes;
+    private final Map<String, Object> children;
 
     private GenericCAEXObject(Object caexObject, Map<String, Object> attributes, Map<String, Object> children)  {
         this.sourceCAEXObject = caexObject;
@@ -43,32 +44,10 @@ public class GenericCAEXObject {
         this.children = Map.copyOf(children);
     }
 
-    private GenericCAEXObject(Object caexObject, Map<String, Object> attributes, GenericCAEXObject parent, Map<String, Object> children)  {
-        this.sourceCAEXObject = caexObject;
-        this.attributes = Map.copyOf(attributes);
-
-        children.forEach((key, val) -> {
-            if (val instanceof GenericCAEXObject) {
-                ((GenericCAEXObject) val).setParent(this);
-            }
-
-            if (val instanceof List) {
-                ((List<?>) val).forEach(item -> {
-                    if (item instanceof GenericCAEXObject) {
-                        ((GenericCAEXObject) item).setParent(this);
-                    }
-                });
-            }
-        });
-
-        this.children = Map.copyOf(children);
-        this.parent = parent;
-    }
-
     /**
      * Gets the original CAEX object of this generic object.
      *
-     * @return
+     * @return Original CAEX object.
      */
     public Object getSourceCAEXObject() {
         return sourceCAEXObject;
@@ -79,7 +58,7 @@ public class GenericCAEXObject {
      * These represent the real attributes of corresponding XML node.
      * Keys are attribute names as in XML.
      *
-     * @return Map<String, Object> Map of attributes.
+     * @return Map of attributes.
      */
     public Map<String, Object> getAttributes() {
         return attributes;
@@ -109,26 +88,45 @@ public class GenericCAEXObject {
     /**
      * Gets child objects based on given element name.
      *
-     * @param elementName
-     * @return
+     * @param elementName Name of child element (e.g. InternalElement).
+     * @return Object of element (or null if no such child with the given name).
      */
-    public Object getChild(String elementName) {
+    public Object getChildren(String elementName) {
         return children.get(elementName);
+    }
+
+    /**
+     * Gets name of this element.
+     *
+     * @return Element name.
+     */
+    public String getElementName() {
+        return elementName;
     }
 
     /**
      * Returns parent object.
      *
-     * @return
+     * @return Parent object.
      */
     public GenericCAEXObject getParent() {
         return parent;
     }
 
+    /**
+     * Sets parent object.
+     *
+     * @param parent PArent object.
+     */
     private void setParent(GenericCAEXObject parent) {
         this.parent = parent;
     }
 
+    /**
+     * Sets element name.
+     *
+     * @param elementName Element name.
+     */
     private void setElementName(String elementName) {
         this.elementName = elementName;
     }
@@ -136,8 +134,8 @@ public class GenericCAEXObject {
     /**
      * Generates a GenericCAEXObject from a GeneralizableCAEXObject.
      *
-     * @param caexObject
-     * @return
+     * @param caexObject Source CAEX object for generalization.
+     * @return Generalized CAEX object.
      */
     public static GenericCAEXObject from(GeneralizableCAEXObject caexObject) {
 
@@ -246,7 +244,7 @@ public class GenericCAEXObject {
     }
 
     /**
-     * Checks if given object a GeneralizableCAEXObject.
+     * Checks if given object is a GeneralizableCAEXObject.
      *
      * @param clazz Object to test.
      * @return True if the specified object implements the GeneralizableCAEXObject interface.
@@ -263,5 +261,14 @@ public class GenericCAEXObject {
         }
 
         return res;
+    }
+
+    @Override
+    public String toString() {
+        return "GenericCAEXObject{" +
+                "elementName='" + elementName + '\'' +
+                ", attributes=" + attributes.keySet().stream().map(
+                        key -> "[" + key + "='" + attributes.get(key) + "']").collect(Collectors.joining()) +
+                '}';
     }
 }
