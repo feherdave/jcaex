@@ -3,8 +3,6 @@ plugins {
     id 'maven-publish'
 }
 
-apply plugin: 'java'
-
 group 'org.fd'
 version '0.1'
 
@@ -26,6 +24,10 @@ test {
     useJUnitPlatform()
 }
 
+java {
+    withJavadocJar()
+}
+
 publishing {
     repositories {
         maven {
@@ -41,6 +43,7 @@ publishing {
     publications {
         gpr(MavenPublication) {
             from components.java
+            artifact javadocJar
         }
     }
 }
