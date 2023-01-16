@@ -13,10 +13,6 @@ java {
     withSourcesJar()
 }
 
-javadocJar {
-    exclude ' package-info.java'
-}
-
 repositories {
     mavenCentral()
 }

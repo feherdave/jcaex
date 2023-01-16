@@ -1,3 +1,7 @@
+/**
+ * Objects used by CAEX v2.15
+ */
+
 @XmlSchema(xmlns = @XmlNs(prefix = "", namespaceURI = "http://www.dke.de/CAEX"),
         elementFormDefault = XmlNsForm.QUALIFIED,
         attributeFormDefault = XmlNsForm.UNQUALIFIED)
