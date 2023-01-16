@@ -14,7 +14,7 @@ java {
 }
 
 javadocJar {
-    exclude ("package-info.java")
+    exclude ' package-info.java'
 }
 
 repositories {
