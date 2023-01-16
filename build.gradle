@@ -3,14 +3,12 @@ plugins {
     id 'maven-publish'
 }
 
+apply plugin: 'java'
+
 group 'org.fd'
 version '0.1'
 
 description("Java module for parsing CAEX v2.15/v3.0 files")
-
-java {
-    withJavadocJar()
-}
 
 repositories {
     mavenCentral()
@@ -44,7 +42,5 @@ publishing {
         gpr(MavenPublication) {
             from components.java
         }
-
-        javadoc(MavenPublication) { }
     }
 }
