@@ -1,5 +1,5 @@
 /**
- * Objects used by CAEX v2.15
+ * CAEX v2.15 package
  */
 
 @XmlSchema(xmlns = @XmlNs(prefix = "", namespaceURI = "http://www.dke.de/CAEX"),
