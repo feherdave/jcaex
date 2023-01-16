@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c1dca0b-6c71-4c58-909f-36b7f4594957" name="Changes" comment="Created CAEXFilter class and javadoc.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/AbstractElementFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/CAEXFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/CAEXFilterException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/ElementFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/FilterNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/filter/TextNodeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/GenericCAEXObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/GenericCAEXObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/tools/CAEXTools.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/v2_15/Attribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fd/jcaex/v2_15/Attribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/jcaextest/jcaextest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jcaextest/JCAEXTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672836730899</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created CAEXFilter class and javadoc.">
+      <created>1673448079501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673448079502</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

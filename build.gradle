@@ -6,7 +6,12 @@ plugins {
 group 'org.fd'
 version '0.1'
 
-description("Java module for reading CAEX v2.15/v3.0 files")
+description("Java module for parsing CAEX v2.15/v3.0 files")
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
 
 repositories {
     mavenCentral()
