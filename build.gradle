@@ -24,8 +24,8 @@ test {
     useJUnitPlatform()
 }
 
-java {
-    withJavadocJar()
+task myJavadocs(type: Javadoc) {
+    source = sourceSets.main.allJava
 }
 
 publishing {
@@ -43,7 +43,7 @@ publishing {
     publications {
         gpr(MavenPublication) {
             from components.java
-            artifact javadocJar
+            artifact 'myJavadocs'
         }
     }
 }
