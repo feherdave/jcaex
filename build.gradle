@@ -44,7 +44,7 @@ publishing {
         gpr(MavenPublication) {
             from components.java
 
-            artifact distsDirName + "\\jcaex-${version}-javadoc.jar"
+            artifact "build\\libs\\jcaex-${version}-javadoc.jar"
         }
     }
 }
