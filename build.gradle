@@ -24,6 +24,9 @@ test {
     useJUnitPlatform()
 }
 
+java {
+    withJavadocJar()
+}
 
 publishing {
     repositories {
@@ -41,9 +44,7 @@ publishing {
         gpr(MavenPublication) {
             from components.java
 
-            java {
-                withJavadocJar()
-            }
+            artifact 'jcaex-{$version}-javadoc.jar'
         }
     }
 }
