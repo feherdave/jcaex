@@ -24,10 +24,6 @@ test {
     useJUnitPlatform()
 }
 
-java {
-    withJavadocJar()
-    withSourcesJar()
-}
 
 publishing {
     repositories {
@@ -42,10 +38,12 @@ publishing {
     }
 
     publications {
-        maven(MavenPublication) {
+        gpr(MavenPublication) {
             from components.java
-            artifact javadocJar
-            artifact sourcesJar
+
+            java {
+                withJavadocJar()
+            }
         }
     }
 }
