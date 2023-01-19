@@ -41,7 +41,7 @@ publishing {
     }
 
     publications {
-        gpr(MavenPublication) {
+        maven(MavenPublication) {
             from components.java
 
             artifact "build\\libs\\jcaex-${version}-javadoc.jar"
