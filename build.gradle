@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'java-library'
     id 'maven-publish'
 }
 
@@ -22,10 +22,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-java {
-    withJavadocJar()
 }
 
 publishing {
