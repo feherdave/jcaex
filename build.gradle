@@ -44,7 +44,7 @@ publishing {
         gpr(MavenPublication) {
             from components.java
 
-            artifact 'jcaex-${version}-javadoc.jar'
+            artifact "jcaex-${version}-javadoc.jar"
         }
     }
 }
