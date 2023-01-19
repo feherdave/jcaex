@@ -26,6 +26,7 @@ test {
 
 java {
     withJavadocJar()
+    withSourcesJar()
 }
 
 publishing {
@@ -44,7 +45,7 @@ publishing {
         maven(MavenPublication) {
             from components.java
 
-            artifact "build\\libs\\jcaex-${version}-javadoc.jar"
+//            artifact "build\\libs\\jcaex-${version}-javadoc.jar"
         }
     }
 }
