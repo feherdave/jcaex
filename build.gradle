@@ -46,7 +46,12 @@ publishing {
             from components.java
 
             pom.withXml {
-                asNode().dependencies[0]?.appendNode('dependency').appendNode('classifier', 'javadoc')
+                def javadocDepNode = asNode().dependencies[0]?.appendNode('dependency')
+                
+                javadocDepNode.appendNode('classifier', 'javadoc')
+                javadocDepNode.appendNode('groupId', 'org.fd')
+                javadocDepNode.appendNode('artifactId', 'javadoc')
+                javadocDepNode.appendNode('version', '0.1')
             }
 
 //            pom {
