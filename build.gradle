@@ -8,6 +8,11 @@ version '0.1'
 
 description("Java module for parsing CAEX v2.15/v3.0 files")
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 repositories {
     mavenCentral()
 }
@@ -18,15 +23,12 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    javadoc
 }
 
 test {
     useJUnitPlatform()
-}
-
-java {
-    withJavadocJar()
-    withSourcesJar()
 }
 
 publishing {
@@ -45,9 +47,9 @@ publishing {
         gpr(MavenPublication) {
             from components.java
 
-            pom.withXml {
-                asNode().appendNode('dependencies').appendNode('dependency').appendNode('classifier', 'javadoc')
-            }
+//            pom.withXml {
+//                asNode().appendNode('dependencies').appendNode('dependency').appendNode('classifier', 'javadoc')
+//            }
         }
     }
 }
