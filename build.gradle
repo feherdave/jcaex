@@ -50,7 +50,7 @@ publishing {
                 
                 javadocDepNode.appendNode('classifier', 'javadoc')
                 javadocDepNode.appendNode('groupId', 'org.fd')
-                javadocDepNode.appendNode('artifactId', 'javadoc')
+                javadocDepNode.appendNode('artifactId', 'jcaex')
                 javadocDepNode.appendNode('version', '0.1')
             }
 
