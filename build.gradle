@@ -42,10 +42,12 @@ publishing {
     }
 
     publications {
-        maven(MavenPublication) {
+        gpr(MavenPublication) {
             from components.java
 
-//            artifact "build\\libs\\jcaex-${version}-javadoc.jar"
+            pom.withXml {
+                asNode().appendNode('dependencies').appendNode('dependency').appendNode('classifier', 'javadoc')
+            }
         }
     }
 }
