@@ -45,15 +45,15 @@ publishing {
         gpr(MavenPublication) {
             from components.java
 
-//            pom.withXml {
-//                asNode().dependencies.dependency.add('classifier', 'javadoc')
-//            }
-
-            pom {
-                dependencies {
-                    javadoc
-                }
+            pom.withXml {
+                asNode().dependencies.dependency.add('classifier', 'javadoc')
             }
+
+//            pom {
+//                dependencies {
+//                    javadoc
+//                }
+//            }
         }
     }
 }
